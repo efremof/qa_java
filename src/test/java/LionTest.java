@@ -26,7 +26,7 @@ public class LionTest {
     public void doesHaveManeTest() throws Exception {
         //Arrange
         boolean expectedResult = true;
-        Lion lion = new Lion("Самец");
+        Lion lion = new Lion("Самец", feline);
 
         //Act
         boolean actualResult = lion.doesHaveMane();
@@ -36,7 +36,7 @@ public class LionTest {
     }
 
     @Test
-    public void getKittensTest() {
+    public void getKittensTest() throws Exception {
         Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getKittens()).thenReturn(100);
         Assert.assertEquals(100, lion.getKittens());
